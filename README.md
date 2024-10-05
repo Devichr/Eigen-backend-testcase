@@ -60,5 +60,5 @@ A backend API to manage a simple library system where members can borrow and ret
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Devichr/Eigen-Backed-testcase.git
+   git clone https://github.com/Devichr/Eigen-backend-testcase.git
    cd library-system
