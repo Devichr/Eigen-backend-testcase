@@ -27,19 +27,19 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Requirements
- it should be use NestJS Framework Or ExpressJS With TypeScript
- `-> i Build this using NestJS
- it should be use Swagger as API Documentation
- `-> Swagger used for API Documentation
- it should be use Database (SQL/NoSQL)
- `-> i'm using PostgreSql
- it should be open sourced on your github repo
- `-> Yes it is now open source
+ it should be use NestJS Framework Or ExpressJS With TypeScript <br>
+ `-> i Build this using NestJS <br>
+ it should be use Swagger as API Documentation <br>
+ `-> Swagger used for API Documentation <br>
+ it should be use Database (SQL/NoSQL) <br>
+ `-> i'm using PostgreSql <br>
+ it should be open sourced on your github repo <br>
+ `-> Yes it is now open source <br>
  
 ## Extras
 
-I already implemented DDD Pattern
-And there is test unit implemented
+I already implemented DDD Pattern <br>
+And there is test unit implemented <br>
 
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
