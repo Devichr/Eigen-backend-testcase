@@ -22,7 +22,25 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## This Repository Is Requirement for PT. Eigen Tri Mathema Backend Test Case
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Requirements
+ it should be use NestJS Framework Or ExpressJS With TypeScript
+ `-> i Build this using NestJS
+ it should be use Swagger as API Documentation
+ `-> Swagger used for API Documentation
+ it should be use Database (SQL/NoSQL)
+ `-> i'm using PostgreSql
+ it should be open sourced on your github repo
+ `-> Yes it is now open source
+ 
+## Extras
+
+I already implemented DDD Pattern
+And there is test unit implemented
+
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
