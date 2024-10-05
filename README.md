@@ -1,103 +1,64 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# This library system is technical test of PT. Eigen Tri Mathema Backend test Case
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## This Repository Is Requirement for PT. Eigen Tri Mathema Backend Test Case
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A backend API to manage a simple library system where members can borrow and return books under specific conditions. The project uses **NestJS** as the backend framework, **Swagger** for API documentation, and implements Domain-Driven Design (DDD) and Unit Testing.
 
 ## Requirements
- it should be use NestJS Framework Or ExpressJS With TypeScript <br>
- `-> i Build this using NestJS <br>
- it should be use Swagger as API Documentation <br>
- `-> Swagger used for API Documentation <br>
- it should be use Database (SQL/NoSQL) <br>
- `-> i'm using PostgreSql <br>
- it should be open sourced on your github repo <br>
- `-> Yes it is now open source <br>
- 
+
+- **NestJS Framework** or **ExpressJS** with TypeScript
+- **Swagger** for API documentation
+- **SQL/NoSQL Database**
+- The project is **open-sourced** on GitHub
+
+- ## Tech Stack
+
+- **Framework**: NestJS
+- **Language**: TypeScript
+- **Database**: PostgreSQL
+- **API Documentation**: Swagger
+- **Testing**: Jest
+
 ## Extras
 
-I already implemented DDD Pattern <br>
-And there is test unit implemented <br>
+- Domain-Driven Design (DDD) Pattern
+- Unit Testing with **Jest**
 
+## Features
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Entities
 
-## Project setup
+1. **Member**
+   - A member can borrow up to 2 books.
+   - Members cannot borrow books if they are penalized.
 
-```bash
-$ npm install
-```
+2. **Book**
+   - Books can only be borrowed by one member at a time.
+   - Books being borrowed are marked as unavailable.
 
-## Compile and run the project
+### Use Cases
 
-```bash
-# development
-$ npm run start
+1. **Borrowing Books**
+   - Members can borrow books under the following conditions:
+     - A member cannot borrow more than 2 books.
+     - A book being borrowed cannot be borrowed by another member.
+     - The member is not currently penalized.
 
-# watch mode
-$ npm run start:dev
+2. **Returning Books**
+   - Members can return books with the following conditions:
+     - The returned book must be one the member borrowed.
+     - If the book is returned after more than 7 days, the member will be penalized.
+     - Penalized members cannot borrow books for 3 days.
 
-# production mode
-$ npm run start:prod
-```
+3. **Check Book Availability**
+   - Shows all available books and their quantities.
+   - Books that are being borrowed are not counted.
 
-## Run tests
+4. **Member Check**
+   - Displays all existing members.
+   - Shows the number of books each member is currently borrowing.
 
-```bash
-# unit tests
-$ npm run test
+## Installation
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Devichr/Eigen-Backed-testcase.git
+   cd library-system
