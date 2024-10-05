@@ -68,19 +68,19 @@ describe('MembersService', () => {
         borrowedBy: null,
       };
 
-      // Mock findOne to avoid circular reference
+      
       mockMemberRepository.findOne.mockResolvedValue(member);
       mockBookRepository.findOne.mockResolvedValue(book);
 
-      // Mock save function
+      
       mockBookRepository.save.mockResolvedValue({
         ...book,
         isBorrowed: true,
-        borrowedBy: { id: memberId, name: 'Angga' }, // Avoid deep nesting
+        borrowedBy: { id: memberId, name: 'Angga' }, 
       });
       mockMemberRepository.save.mockResolvedValue({
         ...member,
-        borrowedBooks: [{ ...book, borrowedBy: undefined }], // Avoid circular reference here
+        borrowedBooks: [{ ...book, borrowedBy: undefined }], 
       });
 
       const result = await service.borrowBook(memberId, bookId);
