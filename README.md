@@ -56,6 +56,7 @@ A backend API to manage a simple library system where members can borrow and ret
    - Displays all existing members.
    - Shows the number of books each member is currently borrowing.
 
+<<<<<<< HEAD
 ## Repository
 
 https://github.com/Devichr/Eigen-backend-testcase
