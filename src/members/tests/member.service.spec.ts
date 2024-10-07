@@ -63,6 +63,8 @@ describe('MembersService', () => {
       const book = {
         id: bookId,
         title: 'Harry Potter',
+        code: 'JK-45',
+        author : 'J.K. Rowling',
         stock: 1,
         isBorrowed: false,
         borrowedBy: null,
@@ -87,13 +89,17 @@ describe('MembersService', () => {
 
       expect(result).toEqual({
         message: `Book 'Harry Potter' successfully borrowed by Angga`,
-        book: expect.objectContaining({
+        book: {
           id: book.id,
           title: book.title,
           isBorrowed: true,
-          borrowedBy: expect.objectContaining({ id: member.id, name: member.name }),
-        }),
+          borrowedBy: 1, // Expect just the member ID here
+          stock: book.stock,  // Add stock if necessary
+          author: book.author,  // Add author if necessary
+          code: book.code,  // Add code if necessary
+        },
       });
+      
     });
 
     it('should throw error if member has borrowed 2 books', async () => {
